@@ -177,28 +177,32 @@ class CartScreen extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          Row(
+          Column(
             children: [
-              SizedBox(
-                width: 20,
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  UiHelper.CustomText(
+                      text: "Amul Taaza Toned \nFresh Milk",
+                      color: Colors.black,
+                      fontweight: FontWeight.w400,
+                      fontsize: 8),
+                ],
               ),
-              UiHelper.CustomText(
-                  text: "Amul Taaza Toned \nFresh Milk",
-                  color: Colors.black,
-                  fontweight: FontWeight.w400,
-                  fontsize: 8),
-            ],
-          ),
-
-          Row(
-            children: [
-              SizedBox(width: 18,),
-              UiHelper.CustomImage(img: "timer 1.png"),
-              UiHelper.CustomText(
-                  text: "16 MINS",
-                  color: Color(0XFF9C9C9C),
-                  fontweight: FontWeight.w400,
-                  fontsize: 8),
+              SizedBox(height: 3),
+              Row(
+                children: [
+                  SizedBox(width: 17,),
+                  UiHelper.CustomImage(img: "timer 1.png"),
+                  UiHelper.CustomText(
+                      text: "16 MINS",
+                      color: Color(0XFF9C9C9C),
+                      fontweight: FontWeight.w400,
+                      fontsize: 8),
+                ],
+              ),
             ],
           ),
         ],

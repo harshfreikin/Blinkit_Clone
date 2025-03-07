@@ -74,7 +74,7 @@ class CategoryScreen extends StatelessWidget {
                             color: Color(0XFF000000),
                             fontweight: FontWeight.w700,
                             fontsize: 20,
-                        fontfamily: "bold"),
+                            fontfamily: "bold"),
                       ],
                     ),
                     Row(
