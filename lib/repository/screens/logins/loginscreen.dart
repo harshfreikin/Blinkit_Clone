@@ -8,9 +8,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
             UiHelper.CustomImage(img: "Blinkit Onboarding Screen.png"),
             SizedBox(height: 30),
             UiHelper.CustomImage(img: "image 10.png"),
@@ -93,8 +94,10 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(height: 20), // Add bottom padding
           ],
+          ),
         ),
       ),
     );

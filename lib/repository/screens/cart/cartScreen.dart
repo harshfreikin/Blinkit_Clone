@@ -7,8 +7,9 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
           SizedBox(height: 25),
           Stack(
             children: [
@@ -126,53 +127,51 @@ class CartScreen extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Stack(
-                children: [
-                  UiHelper.CustomImage(img: "image 45.png"),
-                  Padding(
-                    padding: EdgeInsets.only(top: 95, left: 65),
-                    child: UiHelper.CustomButton(() {}),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Stack(
-                    children: [
-                      UiHelper.CustomImage(img: "image 44.png"),
-                      Padding(
-                        padding: EdgeInsets.only(top: 95, left: 65),
-                        child: UiHelper.CustomButton(() {}),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Stack(
-                        children: [
-                          UiHelper.CustomImage(img: "image 46.png"),
-                          Padding(
-                            padding: EdgeInsets.only(top: 95, left: 65),
-                            child: UiHelper.CustomButton(() {}),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 20,
+                ),
+                Stack(
+                  children: [
+                    UiHelper.CustomImage(img: "image 45.png"),
+                    Padding(
+                      padding: EdgeInsets.only(top: 95, left: 65),
+                      child: UiHelper.CustomButton(() {}),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Stack(
+                  children: [
+                    UiHelper.CustomImage(img: "image 44.png"),
+                    Padding(
+                      padding: EdgeInsets.only(top: 95, left: 65),
+                      child: UiHelper.CustomButton(() {}),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Stack(
+                  children: [
+                    UiHelper.CustomImage(img: "image 46.png"),
+                    Padding(
+                      padding: EdgeInsets.only(top: 95, left: 65),
+                      child: UiHelper.CustomButton(() {}),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: 5,
@@ -205,7 +204,9 @@ class CartScreen extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20), // Add bottom padding
         ],
+        ),
       ),
     );
   }

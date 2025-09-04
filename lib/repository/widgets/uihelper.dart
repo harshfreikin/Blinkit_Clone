@@ -25,7 +25,7 @@ class UiHelper {
   static CustomTextField({required TextEditingController controller}) {
     return Container(
       height: 40,
-      width: 360,
+      width: 300, // Reduced from 360 to 300 to fit with padding
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,

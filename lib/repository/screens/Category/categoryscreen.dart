@@ -35,8 +35,9 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
           SizedBox(
             height: 25,
           ),
@@ -137,8 +138,8 @@ class CategoryScreen extends StatelessWidget {
             height: 10,
           ),
           // here we add each category section with the use of array
-          Expanded(
-            flex: 5,
+          Container(
+            height: 120,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -170,8 +171,8 @@ class CategoryScreen extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 5,
+          Container(
+            height: 120,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -216,8 +217,8 @@ class CategoryScreen extends StatelessWidget {
                   fontfamily: "bold"),
             ],
           ),
-          Expanded(
-            flex: 5,
+          Container(
+            height: 120,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -264,8 +265,8 @@ class CategoryScreen extends StatelessWidget {
                   fontsize: 14)
             ],
           ),
-          Expanded(
-            flex: 4,
+          Container(
+            height: 100,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -288,7 +289,9 @@ class CategoryScreen extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20), // Add bottom padding
         ],
+        ),
       ),
     );
   }

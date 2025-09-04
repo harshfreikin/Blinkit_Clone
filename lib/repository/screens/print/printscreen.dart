@@ -8,8 +8,9 @@ class PrintScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0XFFFBF0CE),
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
           SizedBox(
             height: 25,
           ),
@@ -112,7 +113,7 @@ class PrintScreen extends StatelessWidget {
             children: [
               Container(
                 height: 175,
-                width: 361,
+                width: 340, // Reduced from 361 to 340 to fit screen width
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.white,
@@ -225,8 +226,10 @@ class PrintScreen extends StatelessWidget {
                 bottom: 40,
               ),
             ],
-          )
+          ),
+          SizedBox(height: 20), // Add bottom padding
         ],
+        ),
       ),
     );
   }
